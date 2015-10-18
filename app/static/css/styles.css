@@ -1,0 +1,218 @@
+/*************** 页面公共结构 *****************/
+.foot{
+	position: relative;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+	font-size: 0.7em;
+	margin-bottom: 40px;
+}
+.foot p{
+    text-overflow: initial;
+}
+body{
+	margin-bottom:30px; 
+}
+
+/*************** 公司页 **************/
+#company, #us{
+	min-height: 600px;
+	padding: 20px;
+	margin: 10px;
+	border: solid 2px #6d9dde;
+	border-radius:5px;
+}
+#company .title, #us .title{
+	text-align: center;
+}
+/*************** shouye **************/
+#index{
+	border: solid 20px #66ccff;
+	border-radius:15px;
+}
+#index .header{
+	position: relative;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+#index .header #icon{
+	position: relative;
+	width: 40%;
+}
+#index .header #app_info{
+	position: absolute;
+	top: 20px;
+	left: 40%;
+	width: 58%;
+}
+#index .download{
+	position: relative;
+	text-align: center;
+	padding-top: 20px;
+}
+#index .bt_download{
+	width: 98%;
+	background: #66ccff;
+	display: inline-block;
+	padding:5px;
+	color: yellow;
+	font-size: 12px
+}
+#index .images{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    left: 0px;
+}
+#index .images ul{
+	display: -webkit-flex;
+	display: flex;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: scroll;
+}
+#index .images ul li{
+	display: inline;
+	margin-right: 5px;
+}
+#index .images ul li img{
+	height: 140px;
+}
+#index .app_content h4{
+	font-size: 13px;
+}
+#index .app_content p{
+	font-size: 12px;
+}
+
+/*************** app **************/
+#app{
+	border: 20px;
+	border-radius:2px;
+}
+#app .header{
+	position: relative;
+    height: 148px;
+    border-bottom: solid 1px #f6f6f6;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+#app .header #icon{
+	position: relative;
+	width: 80px;
+	padding: 10px;
+
+}
+#app .header #icon img{
+	width: 70px;
+	height: auto;
+}
+#app .header #app_info{
+	position: absolute;
+	top: 5px;
+	left: 90px;
+}
+#app .header #app_name{
+	padding: 0px;
+	margin: 0px;
+}	
+#app .app_stars img{
+	width: 12px;
+	height:12px;
+}
+#app .header .app_score{
+	font-size: 11px;
+	color: #666666;
+}
+#app .download{
+	position: relative;
+	text-align: center;
+	padding-top: 5px;
+}
+#app .bt_download{
+	width: 96%;
+	margin-top: 5px;
+	background: #22c480;
+	display: inline-block;
+	padding:8px 0px;
+	font-size: 12px;
+	color: #ffffff;
+}
+#app .images{
+    position: relative;
+    width: 100%;
+    left: 0px;
+    padding-top: 0px;
+}
+#app .images ul{
+	display: -webkit-flex;
+	display: flex;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: scroll;
+}
+#app .images ul li{
+	display: inline;
+	margin-right: 5px;
+}
+#app .images ul li img{
+	height: 140px;
+}
+#app .app_content{
+	min-height: 230px;
+}
+#app .app_content h4{
+	font-size: 13px;
+}
+#app .app_content p{
+	font-size: 12px;
+}
+
+#update form{
+    text-align:center;
+    font-size: 1.2em;
+}
+.push_flow{
+    position: fixed;
+    left: 0px;
+    height: 70px;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.75);
+    padding: 10px;
+    vertical-align: middle;
+    z-index: 100;
+}
+.push_flow img{
+    width: 50px;
+    height: auto;
+
+}
+.push_flow span{	
+    color: #22c480;
+    font-size: 16px;
+
+}
+.push_flow .bt_download_1{
+    position: absolute;
+    right: 40px;
+    background-color: #22c480;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 10px;
+
+}
+.push_flow .close_flow{
+
+    float: right;
+    right: 5px;
+    margin-top: 5px;
+
+}
+.push_flow .close_flow img{
+	width:9px;
+}

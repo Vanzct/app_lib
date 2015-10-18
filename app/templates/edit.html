@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <section class="add">
+        <form>
+            <label for="name">应用名</label>
+            <input id="name" name="name" type="text" size="25"><br>
+            <label for="name">应用ID</label>
+            <input id="key" name="name" type="text" size="25"><br>
+            <input type="submit" value="创建应用">
+        </form>
+    </section>
+    <section>
+        <ul>
+            {% for app in apps %}
+            <li>
+                <div>
+                    <h4>{{ app["name"]}}</h4>
+                    <p>{{ app["key"] }}</p>
+                    <aside>
+                        <a href="{{ url_for('.update', key=app['key']) }}">修改</a>
+                    </aside>
+                </div>
+            </li>
+            {% endfor%}
+        </ul>
+    </section>
+</body>
+</html>

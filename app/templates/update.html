@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="update">
+    <form action="#" method="get">
+        <label for="name">应用名</label><br>
+        <input id="name" name="name" type="text" value="{{ app['name'] }}">
+        <hr>
+        <input id="key" name="key" type="hidden" value="{{ app['key'] }}">
+        <hr>
+        <label for="download_count">下载量</label><br>
+        <input id="download_count" name="download_count" type="text" value="{{ app['download_count'] }}">
+        <hr>
+        <label for="size">应用大小</label><br>
+        <input id="size" name="size" type="text" value="{{ app['size'] }}">
+        <hr>
+        <label for="image_count">图片数</label><br>
+        <input id="image_count" name="image_count" type="text" value="{{ images_count }}">
+        <hr>
+        <label for="introduction">应用简介</label><br>
+
+        <textarea id="introduction" name="introduction" >
+            {{ app['introduction'] }}
+        </textarea>
+        <hr>
+    </form>
+    </div>
+</body>
+</html>

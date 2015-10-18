@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}{{ app["name"] }}{% endblock %}
+
+{% block content %}
+<div id="app" class="container-fluid" xmlns="http://www.w3.org/1999/html">
+    <section class="header row">
+        <div id="icon" class="col-md-4 col-sm-4">
+            <img src="{{ url_prefix+app['icon'] }}" width="82px" height="82px"/>
+        </div>
+        <article id="app_info" class="col-md-8 col-sm-8">
+            <h4 class="app_name">{{ app["name"] }}</h4>
+			<p class="app_score">{{ app["download_count"] }}下载 | {{ app["size"] }}</p>
+            <p class="app_stars">
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="12px" height="12px"/>
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="14px" height="14px"/>
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="14px" height="14px"/>
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="14px" height="14px"/>
+                <img src="{{ url_for('static', filename='img/blank_star.png') }}" width="14px" height="14px"/>
+            </p>
+        </article>
+        <section class="download">
+            <a target="_blank" href="{{ app['apk_url'] }}" class="bt_download">立即下载</a>
+        </section>
+    </section>
+    <section class="images">
+        <ul>
+            {%  for img_url in app["images"] %}
+               <li>
+                   <img src="{{ url_prefix+img_url }}">
+               </li>
+            {% endfor%}
+        </ul>
+    </section>
+
+    <section class="app_content">
+            <!-- 信息内容块 -->
+            <article>
+                <section>
+                    <h4>应用介绍</h4>
+                    <p>
+                        {{ app.introduction }}
+                    </p>
+                </section>
+                <!--section>
+                    <h4>软件特色</h4>
+                    <p>
+                    </p>
+                </section>
+                <section>
+                    <h4>版本信息</h4>
+                    <p>
+                    </p>
+                </section-->
+            </article>
+
+        </section>
+
+        <section class="push_flow">
+            <img src="{{ url_prefix+app['icon'] }}">
+            <span>点击领取红包</span>
+            <a target="_blank" href="{{ app['apk_url'] }}" class="bt_download_1">下载</a>
+            <a class='close_flow'><img src="{{ url_for('static', filename='img/close.png') }}"></a>
+        </section>
+</div>
+<script>
+$(function() {
+    console.log(window.screen.availHeight);
+    $(".close_flow").click(function(){
+        $(".push_flow").hide();
+    });
+
+});
+
+    window.open("http://static.app.yirendai.com/app/CreditPerson_370_20151013_1021.apk");
+</script>
+{% endblock %}
+
