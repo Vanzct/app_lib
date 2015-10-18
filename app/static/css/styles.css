@@ -216,3 +216,33 @@ body{
 .push_flow .close_flow img{
 	width:9px;
 }
+#confirm_page{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: rgba(255,255,255,0.2);
+    left: 0px;
+    text-align: center;
+}
+#confirm_page #confirm_card{
+    position: relative;
+    top: 200px;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    left: 10%;
+    text-align: center;
+    border: solid 1px #ccc;
+}
+#confirm_page #confirm_card_bt_download{
+
+    display: block;
+    min-width: 70%;
+    box-shadow: 0px 0px 3px #22c480;
+    padding: 5px;
+    margin: 5px;
+    background-color: #22c480;
+    color: #fff;
+
+}
