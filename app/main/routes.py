@@ -9,8 +9,7 @@ from ..mongo import get_app_by_name, get_all_apps, add_app
 
 @main.route('/', methods=['GET'])
 def index():
-    app = App()
-    return render_template("index.html", app=app)
+    return render_template("index.html")
 
 
 @main.route('/app/<key>', methods=['GET'])
