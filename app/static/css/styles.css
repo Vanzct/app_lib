@@ -121,6 +121,7 @@ body{
 	position: absolute;
 	top: 5px;
 	left: 90px;
+	text-align: left;
 }
 #app .header #app_name{
 	padding: 0px;
