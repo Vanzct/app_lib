@@ -5,3 +5,8 @@ pip freeze >requirements.txt
 
 # 安装依赖包
 pip install -r requirements.txt
+
+ssh root@123.57.14.49
+
+vim /etc/supervisord.conf
+sudo service supervisord start

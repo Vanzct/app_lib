@@ -1,4 +1,15 @@
 /*************** 页面公共结构 *****************/
+html{
+	position: relative;
+	text-align: center;
+}
+body{
+	display: inline-block;
+	width: 100%;
+    max-width: 524px;
+    margin-bottom:30px;
+}
+
 .foot{
 	position: relative;
 	height: 50px;
@@ -10,9 +21,7 @@
 .foot p{
     text-overflow: initial;
 }
-body{
-	margin-bottom:30px; 
-}
+
 
 /*************** 公司页 **************/
 #company, #us{

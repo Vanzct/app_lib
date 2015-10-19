@@ -3,8 +3,7 @@ __author__ = 'Van'
 
 from flask import render_template, session, redirect, url_for, current_app, request
 from . import main
-from ..models import App
-from ..mongo import get_app_by_name, get_all_apps, add_app
+from ..mongo import get_app_by_name, get_all_apps, add_app, update_introduction
 
 
 @main.route('/', methods=['GET'])
@@ -16,14 +15,12 @@ def index():
 def show(key=None):
     app = get_app_by_name(key)
     qiuniu_bucket = "http://7s1srd.com1.z0.glb.clouddn.com/"
-    data = {"logo": get(app, "logo", ""),
-            "key": app["key"],
+    data = {"key": app["key"],
             "name": app["name"],
             "download_count": get(app, "download_count", 0),
             "size": get(app, "size", "0M"),
             "introduction": get(app, "introduction", u"赞无"),
-            "version": get(app, "version", u"赞无"),
-            "special": get(app, "special", u"赞无"),
+            "apk_url": get(app, "apk_url", ""),
             "icon": get(app, "icon", ""),
             "images": get(app, "images", [])}
     return render_template("app.html", app=data, url_prefix=qiuniu_bucket)
@@ -104,3 +101,9 @@ def update_submit():
             }
     qiuniu_bucket = "http://7s1srd.com1.z0.glb.clouddn.com/"
     return render_template("app.html", app=data, url_prefix=qiuniu_bucket)
+
+
+@main.route('/update_intro', methods=['GET'])
+def update_in():
+    update_introduction()
+    return "OK"
