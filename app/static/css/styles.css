@@ -164,7 +164,7 @@ body{
 	overflow: scroll;
 }
 #app .images ul li{
-	display: inline;
+	display: inline-block;
 	margin-right: 5px;
 }
 #app .images ul li img{
