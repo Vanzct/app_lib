@@ -107,3 +107,8 @@ def update_submit():
 def update_in():
     update_introduction()
     return "OK"
+
+
+@main.route('/yirendai.html', methods=['GET'])
+def yirendai():
+    return show("yirendai")
