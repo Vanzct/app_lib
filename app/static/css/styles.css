@@ -195,6 +195,7 @@ body{
     padding: 10px;
     vertical-align: middle;
     z-index: 100;
+    text-align: left;
 }
 .push_flow img{
     width: 50px;
