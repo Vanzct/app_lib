@@ -5,6 +5,15 @@ from flask import render_template, session, redirect, url_for, current_app, requ
 from . import main
 from ..mongo import get_app_by_name, get_all_apps, add_app, update_introduction
 
+qiuniu_bucket = "http://7s1srd.com1.z0.glb.clouddn.com/"
+
+
+def get(d, key, default):
+    if key in d:
+        return d[key]
+    else:
+        return default
+
 
 @main.route('/', methods=['GET'])
 def index():
@@ -14,7 +23,6 @@ def index():
 @main.route('/app/<key>', methods=['GET'])
 def show(key=None):
     app = get_app_by_name(key)
-    qiuniu_bucket = "http://7s1srd.com1.z0.glb.clouddn.com/"
     data = {"key": app["key"],
             "name": app["name"],
             "download_count": get(app, "download_count", 0),
@@ -22,15 +30,11 @@ def show(key=None):
             "introduction": get(app, "introduction", u"赞无"),
             "apk_url": get(app, "apk_url", ""),
             "icon": get(app, "icon", ""),
-            "images": get(app, "images", [])}
+            "images": get(app, "images", []),
+            "short": get(app, "short", ""),
+            "bait": get(app, "bait", "")
+            }
     return render_template("app.html", app=data, url_prefix=qiuniu_bucket)
-
-
-def get(d, key, default):
-    if key in d:
-        return d[key]
-    else:
-        return default
 
 
 @main.route('/info', methods=['GET'])
@@ -99,7 +103,6 @@ def update_submit():
             "icon": app.get('icon', key+"/icon"),
             "images": app.get('images', [])
             }
-    qiuniu_bucket = "http://7s1srd.com1.z0.glb.clouddn.com/"
     return render_template("app.html", app=data, url_prefix=qiuniu_bucket)
 
 

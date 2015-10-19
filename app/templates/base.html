@@ -12,14 +12,9 @@
 {% endblock %}
 </head>
 <body>
+{% block body %}
 {% block content %}{% endblock %}
-    <section class="foot">
-        <p>
-            <a class='contact_us' href="{{ url_for('.us') }}">联系我们</a>
-			<a class='company_info' href="{{ url_for('.company') }}">公司简介</a>
-        </p>
-		<p class="copy_right">版权所有：北京精算科技有限公司   备案号：浙ICP备14025266号-1</p>
-    </section>
+{% endblock %}
 </body>
 <script>
     var _hmt = _hmt || [];

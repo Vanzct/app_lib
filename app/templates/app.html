@@ -24,10 +24,10 @@
         </section>
     </section>
     <section class="images">
-        <ul>
+        <ul id="uuuuuuuu">
             {%  for img_url in app["images"] %}
                <li>
-                   <img src="{{ url_prefix+img_url }}">
+                   <a><img class="ass" src="{{ url_prefix+img_url }}"></a>
                </li>
             {% endfor%}
         </ul>
@@ -67,7 +67,7 @@
         <section id="confirm_page">
             <div id="confirm_card">
                 <div id="confirm_card_text">
-                    <p>点击领取200元国庆礼包
+                    <p>{{ app["bait"] }}
                 </div>
                 <a target="_blank" href="{{ app['apk_url'] }}" class="hide_confirm" id="confirm_card_bt_download">下载</a><br>
                 <a target="_blank" href="{{ app['apk_url'] }}" class="hide_confirm" id="confirm_card_bt_cancel" >取消</a>
@@ -84,7 +84,6 @@ $(function() {
         $("#confirm_page").hide();
     });
 });
-
     //window.open("http://static.app.yirendai.com/app/CreditPerson_370_20151013_1021.apk");
 </script>
 {% endblock %}
