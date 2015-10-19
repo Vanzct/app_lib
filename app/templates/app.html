@@ -39,7 +39,9 @@
                 <section>
                     <h4>应用介绍</h4>
                     <p>
-                        {{ app.introduction }}
+                        {% for p in app.introduction.split("<br>") %}
+                            <p>{{ p }}<p>
+                        {% endfor%}
                     </p>
                 </section>
                 <!--section>

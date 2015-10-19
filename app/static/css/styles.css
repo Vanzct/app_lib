@@ -170,6 +170,7 @@ body{
 	height: 140px;
 }
 #app .app_content{
+	text-align: left;
 	min-height: 230px;
 }
 #app .app_content h4{
