@@ -9,4 +9,9 @@ pip install -r requirements.txt
 ssh root@123.57.14.49
 
 vim /etc/supervisord.conf
+
 sudo service supervisord start
+
+netstat -tln  查看端口使用情况
+netstat -tln | grep 8083  则是只查看端口8083的使用情况
+lsof -i :8083 端口被哪个进程占用
