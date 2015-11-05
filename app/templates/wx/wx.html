@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" ng-app="clubApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <title>痒-俱乐部</title>
+    <link rel="stylesheet" href="{{ url_for('wx.static', filename='app/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('wx.static', filename='lib/bootstrap/dist/css/bootstrap.min.css') }}">
+    <script src="{{ url_for('wx.static', filename='lib/angular/angular.min.js') }}"></script>
+    <script src="{{ url_for('wx.static', filename='lib/angular-route/angular-route.min.js') }}"></script>
+    <script src="{{ url_for('wx.static', filename='app/controllers/base_controller.js') }}"></script>
+    <script src="{{ url_for('wx.static', filename='app/controllers/club_controller.js') }}"></script>
+    <script src="{{ url_for('wx.static', filename='app/app.js') }}"></script>
+
+</head>
+<body ng-view>
+	<!--div ng-view class="view-frame container-fluid"></div-->
+</body>
+</html>
