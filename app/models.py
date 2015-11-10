@@ -12,3 +12,5 @@ class App():
         self.version = None
         self.special = None
         self.images = []
+
+

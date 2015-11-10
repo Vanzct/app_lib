@@ -1,0 +1,31 @@
+{% extends "me/base.html" %}
+
+{% block title %}简历－张寻{% endblock %}
+
+{% block content %}
+    <section class="section_block">
+        <ul class="employments">
+            {% for employment in data.employment_experience %}
+            <li class="employment_item">
+                <header>
+                    <h4>{{ employment.company_name }}<small>[{{ employment.company_tag }}]</small></h4>
+                    <p>{{ employment.start_date }}——{{ employment.end_date }}</p>
+                    <p>部门：{{ employment.depart }}</p>
+                </header>
+                <article>
+                    <ul>
+                        {% for experience in employment.experiences %}
+                        <li class="experience_item">
+                            <h5>{{ experience.name }}</h5>
+                            <dt>项目</dt><dd>{{ experience.description }}</dd>
+                            <dt>职责</dt><dd>{{ experience.role }}</dd>
+                        </li>
+                        {% endfor%}
+                    </ul>
+                </article>
+            </li>
+            {% endfor%}
+        </ul>
+    </section>
+
+{% endblock %}

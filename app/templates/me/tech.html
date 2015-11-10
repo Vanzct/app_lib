@@ -1,0 +1,48 @@
+{% extends "me/base.html" %}
+
+{% block title %}简历－张寻{% endblock %}
+
+{% block content %}
+    <section class="section_block header">
+    <div class="cover">
+        <h4>{{ data.tech_title }}</h4>
+        <div class="tags">
+            <p class="java ln">Java</p>
+            <p class="android ln">Android</p>
+            <p class="ln python">Python</p>
+            <p class="ln php">PHP</p>
+            <p class="ln ruby">Ruby</p>
+            <p class="ln js">Js</p>
+            <p class="ln h5">H5</p>
+            <p class="ln less">Less</p>
+            <p class="ln flask">Flask</p>
+            <p class="ln angularjs">AngularJs</p>
+            <p class="ln mysql">Mysql</p>
+            <p class="ln mongodb">Mongodb</p>
+            <p class="ln redis">Redis</p>
+            <p class="ln jenkins">Jenkins</p>
+        </div>
+    </div>
+    </section>
+    <section class="section_block why_not">
+        <p>为什么是一个<span class='special'>伪</span>全栈 程序猿，因为要学习的地方还很多，很多想掌握的技术还没有掌握</p>
+    </section>
+    <section class="section_block">
+        <ul class="techs">
+            {% for tech in data.techs %}
+            <li class="tech_item">
+                <h3>{{ tech.name }}</h3>
+                <section class="tags">
+                {% for tag in tech.tags %}
+                    <span>{{ tag }}</span>
+                {% endfor %}
+                </section>
+                <article>
+                    {{ tech.detail }}
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "me/base.html" %}
+
+{% block title %}简历－张寻{% endblock %}
+
+{% block content %}
+    <section class="header section_block">
+        <article class="context">
+            <h3 class="section_title">{{ data.intro }}</h3>
+            <p>{{ data.target }}</p>
+        </article>
+        <a href="#" class="contact_me" data-toggle="modal" data-target="#myModal">联系方式</a>
+    </section>
+    <section class="section_block info">
+        <h4 class="section_title">基本信息</h4>
+        <dl>
+            <dt>姓名</dt><dd>{{ data.name }}</dd><hr>
+            <dt>常用名</dt><dd>{{ data.alias }}</dd><hr>
+            <dt>英文名</dt><dd>{{ data.name_en }}</dd><hr>
+            <dt>性别</dt><dd>{{ data.sex }}</dd><hr>
+            <dt>生日</dt><dd>{{ data.birthday }}</dd><hr>
+            <dt>住址</dt><dd>{{ data.location }}</dd><hr>
+            <dt>籍贯</dt><dd>{{ data.jiguan }}</dd>
+        </dl>
+    </section>
+    <section class="section_block declaration">
+        <h4 class="section_title">{{ data.declaration_title }}</h4>
+        <p>
+            {{ data.declaration }}
+        </p>
+    </section>
+    <section class="section_block description">
+        <h4 class="section_title">一个 3年工作的 伪全栈 程序猿</h4>
+        <p>
+            {{ data.declaration }}
+        </p>
+    </section>
+
+
+{% endblock %}

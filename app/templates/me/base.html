@@ -1,0 +1,73 @@
+<html lang="zh-CN" ng-app="me_app">
+<head>
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('me.static', filename='lib/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet/less" type="text/css" href="{{ url_for('me.static', filename='app/less/me.less') }}">
+
+    <script src="{{ url_for('me.static', filename='lib/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url_for('me.static', filename='lib/bootstrap/js/modal.js') }}"></script>
+    <script src="{{ url_for('me.static', filename='lib/less/dist/less.min.js') }}"></script>
+</head>
+{% endblock %}
+</head>
+<body>
+{% block body %}
+<div class="view-frame container-fluid" id="{{ page_id }}">
+    <section class="title_bar">
+        <a href="#" class="back"><span class="glyphicon glyphicon-menu-left"></span></a>
+        <span class="">{{ data.name }}</span>
+        <a href="#" class="phone" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-earphone"></span></a>
+    </section>
+    <section class="nav_bar">
+        <div class="logo hide_on_phone">
+            <a href="#"><span class="">{{ data.name }}</span></a>
+        </div>
+
+        <div class="" id="nav">
+            <uL>
+                <li>
+                    <a href="index" class="nav_item {% if page_id=='index' %}active{% endif %}">首页</a>
+                </li>
+                <li>
+                    <a href="experience" class="nav_item {% if page_id=='experience' %}active{% endif %}">履历</a>
+                </li>
+                <li>
+                    <a href="tech" class="nav_item {% if page_id=='tech' %}active{% endif %}" >技术</a>
+                </li>
+                <li>
+                    <a href="other" class="nav_item {% if page_id=='other' %}active{% endif %}">其他</a>
+                </li>
+            </uL>
+        </div>
+    </section>
+{% block content %}{% endblock %}
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">联系方式</h4>
+      </div>
+      <div class="modal-body">
+        <p>18612596605</p>
+        <p>heidazhangchengtao@163.com</p>
+        <p>QQ:258627058</p>
+        <div class="qrcode">
+            <p>浏览器扫二维码可打开简历</p>
+            <img src="{{ url_for('me.static', filename='app/img/web_url_qrcode.png') }}">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!--button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button-->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+{% endblock %}
+</body>
+</html>

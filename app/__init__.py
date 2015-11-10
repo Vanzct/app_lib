@@ -30,7 +30,9 @@ def create_app(config_name):
     # 微信公众号
     from blue_print_wx import wx
     app.register_blueprint(wx)
-
+    # 简历
+    from blue_print_me import me
+    app.register_blueprint(me)
     # from .auth import auth as auth_blueprint
     # app.register_blueprint(auth_blueprint, url_prefix='/auth')
 
