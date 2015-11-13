@@ -6,7 +6,9 @@
 //    signature: '',// 必填，签名，见附录1
 //    jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 //});
-wx.onMenuShareAppMessage({
+function share(){
+    console.log("share");
+    wx.onMenuShareAppMessage({
     title: '张寻的简历', // 分享标题
     desc: '描述,这是最好的时代', // 分享描述
     link: 'http://www.dflbkj.cn/me/', // 分享链接
@@ -21,7 +23,9 @@ wx.onMenuShareAppMessage({
         // 用户取消分享后执行的回调函数
         alert("cancel");
     }
-})
+    })
+}
+
 
 wx.onMenuShareTimeline({
     title: '简历TO朋友圈', // 分享标题
