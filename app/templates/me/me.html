@@ -19,21 +19,41 @@
             <dt>性别</dt><dd>{{ data.sex }}</dd><hr>
             <dt>生日</dt><dd>{{ data.birthday }}</dd><hr>
             <dt>住址</dt><dd>{{ data.location }}</dd><hr>
-            <dt>籍贯</dt><dd>{{ data.jiguan }}</dd>
+            <dt>籍贯</dt><dd>{{ data.jiguan }}</dd><hr>
         </dl>
+        <div class="education">
+            <p>2008-2012</p>
+            <p>黑龙江大学</p>
+            <p>计算机科学与技术专业</p>
+        </div>
+
     </section>
-    <section class="section_block declaration">
-        <h4 class="section_title">{{ data.declaration_title }}</h4>
-        <p>
-            {{ data.declaration }}
-        </p>
+    <section class="section_block photo">
+        <img src="{{ url_for('me.static', filename='app/img/me.png') }}">
     </section>
     <section class="section_block description">
-        <h4 class="section_title">一个 3年工作的 伪全栈 程序猿</h4>
+        <h4 class="section_title">3年工作的 伪全栈 程序猿</h4>
         <p>
-            {{ data.declaration }}
+            {{ data.declaration }}！
         </p>
-    </section>
 
+        <p>2012年毕业于黑龙江大学，计算机科学与技术专业，来到北京，开启了程序猿之路。</p>
+        <p>大学四年的专业课和两本证书，只是给我们一个走向程序猿之路的门票。越走发现这条路越长，越走越是怀着空杯的心态去学习更多的知识。
+            毕业之后遇到了很多技术障碍，翻看了很多博客和文档，看英文文档也越来越轻松。后来看了大量的书集，各种语言技术，各种互联网
+            知识的书籍，渐渐的懂了很多，学会很多。
+        </p>
+        <p>
+            工作三年，从没间断过写代码和学习，在产品研发和团队协作上也深刻的理解，在多个团队体验敏捷开发模式，
+            了解一款产品从策划到运营的整个过程。三年工作，现在正是一个高效学习，高效产出的时候。
+        </p>
+        <p>
+            为什么是一个<span class="lager">伪</span>全栈工程师，因为对技术兴趣广泛，并且依旧有很长的路要走。
+        </p>
+        <p>
+            总结一下就是：三年工作经验，熟悉多种技术，经历多个团队，懂团队合作，可以高效的学习和产出。
+            重要的是：依旧保持激情，积极努力。
+        </p>
+
+    </section>
 
 {% endblock %}
