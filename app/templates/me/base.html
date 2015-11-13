@@ -10,6 +10,7 @@
     <script src="{{ url_for('me.static', filename='lib/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ url_for('me.static', filename='lib/bootstrap/js/modal.js') }}"></script>
     <script src="{{ url_for('me.static', filename='lib/less/dist/less.min.js') }}"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
 {% endblock %}
 </head>
@@ -69,5 +70,6 @@
 </div><!-- /.modal -->
 </div>
 {% endblock %}
+<script src="{{ url_for('me.static', filename='app/wx.js') }}"></script>
 </body>
 </html>
