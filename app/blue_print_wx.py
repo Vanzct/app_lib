@@ -17,7 +17,7 @@ def something_error(error):
     return render_template('wx/1024.html', error=error), 200
 
 
-@wx.route('/receive_msg', methods=['GET'])
+@wx.route('/receive_msg', methods=['GET', 'POST'])
 def receive_msg():
     try:
         signature = request.args.get("signature")
@@ -39,7 +39,7 @@ def receive_msg():
         else:
             return "false"
     except TypeError, e:
-        return e
+        print e
 
 
 @wx.route('/', methods=['GET'])
