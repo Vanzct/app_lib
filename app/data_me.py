@@ -36,6 +36,7 @@ employment_experience = [
         "role": u"全栈工程师",
         "start_date": "2015-7",
         "end_date": "2015-11",
+        "photo": 'mmsport.png',
         "detail": u"被朋友拉去创业，由于对产品的认可，所以就加入了每每体育，每每体育要做一款全方位服务于运动活动的应用，"
                   u"初始名字叫－找炼，在每每的4个月，用磨刀做过产品原型，自己写了另一应用Club应用整个后台，"
                   u"后来在android同事离开后接手整理android代码，"
@@ -81,7 +82,9 @@ employment_experience = [
         "role": u"数据挖掘工程师",
         "start_date": "2014-11",
         "end_date": "2015-06",
-        "detail": u"在钱方时间不长，离开也实属无奈，在钱方的半年里学会很多东西，有很大的空间。半年中，"
+        "photo": 'qianfang.png',
+        "detail": u"在钱方时间不长，离开也实属无奈，钱方开放的内部文化给每个人很大的发展空间，钱方鼓励每个员工积极思考与参与"
+                  u"，鼓励每个人发言。在钱方的半年里学会很多东西。在钱方的工作内容："
                   u"配置优化了Jenkins平台，使得项目发布更简单便捷；写了喵喵微店应用运营数据实时可视化和日报表Web；写了"
                   u"新项目日志收集和数据可视化Web.",
         "experiences": [
@@ -116,10 +119,11 @@ employment_experience = [
         "depart": u"质量部，卓越运作",
         "start_date": "2013-11",
         "end_date": "2014-11",
-        "detail": u"在搜狐畅游17173一年时间，因为android自动化测试经验进入，"
-                  u"却一直未做自动化测试相关工作，做了一些内部项目数据收集分析及数据可视化的web项目，"
-                  u"在17173一年时间里充实的工作让我学到了很多。不仅技术上学习掌握了很多东西，在团队合作"
-                  u"及敏捷开发等方面也收获颇丰。在17173的工作结束于畅游内部地震，卓越运作部门全体裁员",
+        "photo": '173.png',
+        "detail": u"在搜狐畅游17173一年时间，做了一些内部项目数据收集分析及数据可视化的web项目和一些小的项目，"
+                  u"深刻的体验了敏捷开发模式下的团队合作，入门了Python，PHP，Bootstrap"
+                  u"和highChart等前端框架。熟悉了很多团队使用的工具，如Trello,Jira等等,"
+                  u"后由于跟着领导转到卓越运作部，不久就遇到卓越运作整体裁员。",
         "experiences": [
             {
                 "name": u"内部项目数据可视化",
@@ -149,6 +153,7 @@ employment_experience = [
         "depart": u"质量部，卓越运作",
         "start_date": "2012-07",
         "end_date": "2013-07",
+        "photo": '',
         "detail": u"在东软参与东软内部的产品项目－易测云系统，一款类似于Testin测试云的云测系统，在项目中负责测试框架的开发和"
                   u"部分后台服务的开发。",
         "experiences": [
@@ -173,45 +178,59 @@ employment_experience = [
     }
 ]
 tech_title = U"一个 伪全栈 程序猿的技术之路"
-why_not = U"为什么是一个<span class='special'>伪</span>全栈 程序猿，因为要学习的地方还很多，很多想掌握的技术还没有掌握。" \
-          U"毕业以后读了很多技术和互联网思维方面的书，随着用到的技术越来越多，看的书越来越多，对技术的理解也愈发深刻。"
+
 techs = [
     {
         "name": "Java",
-        "tags": ["Java", "Spring", "Tomcat", "Ant", "Roobtium", "UiAutomate", u"设计模式", u"多线程", u"异常"],
-        "detail": U"使用Java是从大学开始，后来工作的前两年也都是在用Java，用过JSP，也用过SSH三大框架，后来在东软做云测平台，"
+        "tags": ["Java", "Spring", "Tomcat", "Ant", "Robotium", "UiAutomate", u"设计模式", u"多线程", u"异常"],
+        "detail": U"使用Java是从大学开始，后来工作的前两年都在用Java，写过JSP，也用过SSH三大框架，在东软做云测平台"
                   U"开始接触Android开发和云测平台，当时主要的语言就是Java，有一阵子每天醒来都能感觉自己在做跟代码相关的梦，"
-                  U"为了解决工作中的技术难点，开了很多资料和博客，还有Android官方文档。后来学习了设计模式的知识和JVM相关知识，"
-                  U"之后又学了PHP, Python, Ruby 和Js等语言，到现在还是最喜欢Java，当然每种语言都有它的设计哲学，我个人认为"
-                  U"Java是最典雅的一门语言，使用Java写过小游戏，写过网站（J2EE），写过Android自动化框架，写过云测平台整个后台，"
-                  U"写过过Android简单的应用"
+                  U"为了解决工作中的技术难点，查看了很多资料和博客，还有Android官方文档。后来学习了设计模式的知识和JVM相关知识，"
+                  U"之后又学了PHP, Python, Ruby 和Js等语言。现在最喜欢的语言还是Java。使用Java写过小游戏，"
+                  U"写过网站（J2EE），写过Android自动化框架，写过云测平台整个后台，写过过Android简单的应用"
     },
     {
         "name": "Python",
         "tags": ["Python", "Flask", "Uwsgi", "peewee", "pymongo", "qiniu", "redis", "websocket"],
-        "detail": U"学习Python是在搜狐畅游工作中，用于收集畅游各种项目数据，随后就越来越多的使用Python写东西了。用Python写"
-                  U"东西无疑是非常高效的，用Python写了爬虫，写过数据收集，写过网站后台等等。"
+        "detail": U"学习Python是在搜狐畅游工作中用于收集各项目数据，开始以为Python是脚本语言，简单，性能低，以为就是"
+                  U"非程序猿写一些简单脚本的工具语言。后来随着对Python的了解，逐渐抛弃了原有的偏见。在CPU发展到今天这个水平后，"
+                  U"语言的性能在通常情况下已经不是瓶颈因素，猿们变得更喜欢Python灵活和高效开发了。现在能用Python实现的，"
+                  U"我基本不选择Java了，互联网时代，快速实现才是王道。用Python写了爬虫，写过数据收集，写过网站后台等等。"
     },
     {
-        "name": "Php",
-        "tags": ["Jquery", "angularJs", "highchart", "npm", "bower", "bootstrap"],
-        "detail": U"最初学Js时候是使用Jquery写简单的动画和异步数据处理，甚至很长时间以为Jquery就是Js，后来看了许多Js的"
-                  U"书才理解的"
-
-
+        "name": "PHP",
+        "tags": ["PHP", "Session", "MVC", "Nginx"],
+        "detail": U"在畅游时，要做数据可视化Web，看了一周的PHP便开始带着小伙伴们写代码，PHP灵活简单，在Web实现上表现的高效开发，"
+                  U"配置简单，但对于开发人员来说，如何保证代码易维护很重要"
     },
     {
         "name": "Js",
-        "tags": ["Jquery", "angularJs", "highchart", "npm", "bower", "bootstrap"],
-        "detail": U"最初学Js时候是使用Jquery写简单的动画和异步数据处理，甚至很长时间以为Jquery就是Js，后来看了许多Js的"
-                  U"书才理解异步原理和回调机制。"
+        "tags": ["Jquery", "angularJs", "highChart", "npm", "bower", "bootstrap"],
+        "detail": U"最初学Js时候是使用Jquery写简单的动画和异步数据处理，一直感觉JS是一门另类的语言。后来读了一些JS的书，"
+                  U"才理解了JS的语法和设计思想，其回调函数无疑是难易理解的，其异步模式无疑又是那么与众不同，真是又爱又恨"
     },
     {
         "name": "Ruby",
-        "tags": ["Jquery", "angularJs", "highchart", "npm", "bower", "bootstrap"],
-        "detail": U"最初学Js时候是使用Jquery写简单的动画和异步数据处理，甚至很长时间以为Jquery就是Js，后来看了许多Js的"
-                  U"书才理解异步原理和回调机制。"
+        "tags": ["Jquery", "Rails", "gem", "puma"],
+        "detail": U"没有接触Ruby的时候看过松本行弘《代码的未来》，主要讲解技术发展趋势了语言设计哲学，当时即对Ruby很敢兴趣。"
+                  U"后来在创业团队里，有个纽约回来的小伙伴是Ruby控，我也试着用Ruby写东西。Ruby和Python很想，但有些细节和"
+                  U"设计理念是不同的，但跟Python比其中文社区还是比较薄弱，学习Ruby更多的还是需要阅读英文资料，使得Ruby在相对"
+                  U"Python来说学习成本更高，另外Ruby语法灵活，并且其理念－规则约束好于代码实现，使得Ruby学习曲线还是很陡峭的。"
+                  U"松本行弘本人积极的讲解Ruby的设计理念使得学习Ruby过程中学到很多语言之上的知识。"
     },
+    {
+        "name": u"数据库",
+        "tags": ["Oracle", "Mysql", "Mongodb", "Redis", "PostgreSql"],
+        "detail": U"数据库用的比较多，但是Sql查询写的并不怎么样，因为在后来的数据处理方面更习惯用对象数据映射（ORM）框架了。"
+                  U"Mysql是我用的最多的关系数据库，后来NoSql数据库的兴起，其文档型的数据结构，高效开发和部署等性质让我着实喜欢，"
+                  U"在之后的很多开发中都使用了Mongodb数据库。Redis更多用来缓存数据，减少访问数据库的通信负担"
+    },
+    {
+        "name": u"工具类",
+        "tags": ["Github", "Jenkins", "Trello", "Tower", "Eclipse", "Android Studio", "PyCharm", "Sublime"],
+        "detail": U""
+    },
+
 ]
 
 

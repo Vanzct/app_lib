@@ -12,6 +12,11 @@
                     <p>{{ employment.start_date }}——{{ employment.end_date }}</p>
                     <p>职责：{{ employment.depart }}</p>
                     <p>{{ employment.detail }}</p>
+                    {% if employment.photo!= "" %}
+                    <div class="photo">
+                        <img src="{{ url_for('me.static', filename='app/img/'+employment.photo) }}">
+                    </div>
+                    {% endif %}
                 </header>
                 <article>
                     <ul>
