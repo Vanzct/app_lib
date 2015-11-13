@@ -30,8 +30,9 @@ def receive_msg():
         token = "TW20150612"
         tem_arr = [token, timestamp, nonce]
         tem_arr.sort()
-        temp_str = tem_arr.__str__()
-        hash_sha1 = hashlib.sha1(temp_str)
+
+        hash_sha1 = hashlib.sha1()
+        map(hash_sha1.update, tem_arr)
         value = hash_sha1.hexdigest()
         if value == signature:
             return echo_str
