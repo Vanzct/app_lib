@@ -39,7 +39,7 @@ def receive_msg():
         else:
             return "false"
     except TypeError, e:
-        return "args error" + e
+        return e
 
 
 @wx.route('/', methods=['GET'])
