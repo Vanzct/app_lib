@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}公司简介{% endblock %}
+
+{% block body %}
+{% block content %}
+<div id="index" class="container-fluid" xmlns="http://www.w3.org/1999/html">
+    <section class="header row">
+        <div id="icon" class="col-md-4 col-sm-4">
+            <img src="{{ url_for('static', filename='img/movie_ticket_compare/logo.png') }}" width="82px" height="82px"/>
+        </div>
+        <article id="app_info" class="col-md-8 col-sm-8">
+            <p id="app_name">电影票比价<br>
+			<p>4.04万次下载 | 2.04MB</p>
+            <p id="app_score">
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="14px" height="14px"/>
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="14px" height="14px"/>
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="14px" height="14px"/>
+                <img src="{{ url_for('static', filename='img/star.png') }}" width="14px" height="14px"/>
+                <img src="{{ url_for('static', filename='img/blank_star.png') }}" width="14px" height="14px"/>
+            </p>
+        </article>
+        <section class="download">
+            <a href="http://static.v6v7.com/client/dl/1.2.0/114轻应用.apk" class="bt_download">下&nbsp;&nbsp;载</a>
+        </section>
+        <section class="images">
+            <ul>
+                <li><img src="{{ url_for('static', filename='img/movie_ticket_compare/p1.jpg') }}"></li>
+                <li><img src="{{ url_for('static', filename='img/movie_ticket_compare/p2.jpg') }}"></li>
+                <li><img src="{{ url_for('static', filename='img/movie_ticket_compare/p3.jpg') }}"></li>
+                <li><img src="{{ url_for('static', filename='img/movie_ticket_compare/p4.jpg') }}"></li>
+                <li><img src="{{ url_for('static', filename='img/movie_ticket_compare/p5.jpg') }}"></li>
+
+            </ul>
+        </section>
+
+        <section class="app_content">
+                <!-- 信息内容块 -->
+				<article>
+                    <section>
+                        <h4>应用介绍</h4>
+                        <p>
+                            低价电影票，帮你找到同一影院不同平台最低价格及不同影院谁家价格最便宜
+                        </p>
+                    </section>
+                    <section>
+                        <h4>软件特色</h4>
+                        <p>
+
+                        1.收录平台多，猫眼，格瓦拉，美团，糯米，中影，微信电影票，网易电影票，网票网等<br>
+                        2.帮助用户比较这些平台哪家票价最低，然后去哪家购买<br>
+                        3.LBS定位附近影院，然后也可以比较不同影院谁家票价最低<br>
+                        </p>
+                    </section>
+                    <section>
+                        <h4>版本信息</h4>
+                        <p>
+
+                        版本1.2.6   更新时间：2015-07-31<br>
+                        更新说明：<br>
+                        1、新增三家影院之间在不同票务平台的价格比较<br>
+                        2、新增E票网票务信息<br>
+                        3、修复用户反馈BUG
+                        </p>
+                    </section>
+                </article>
+
+            </section>
+
+        <section class="download">
+            <a class="bt_download">下&nbsp;&nbsp;载</a>
+        </section>
+	</section>
+</div>
+{% endblock %}
+<section class="foot">
+</section>
+{% endblock %}

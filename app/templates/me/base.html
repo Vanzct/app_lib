@@ -20,7 +20,7 @@
     <section class="title_bar">
         <a href="#" class="back"><span class="glyphicon glyphicon-menu-left"></span></a>
         <span class="">{{ data.name }}</span>
-        <a href="#" class="phone" onclick="share()"><span class="glyphicon glyphicon-earphone"></span></a>
+        <a href="#" class="phone" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-earphone"></span></a>
     </section>
     <section class="nav_bar">
         <div class="logo hide_on_phone">
@@ -53,12 +53,13 @@
         <h4 class="modal-title">联系方式</h4>
       </div>
       <div class="modal-body">
-        <p>18612596605</p>
+        <p class="phone_num">186-1259-6605</p>
         <p>heidazhangchengtao@163.com</p>
         <p>QQ:258627058</p>
         <div class="qrcode">
-            <p>浏览器扫二维码可打开简历</p>
-            <img src="{{ url_for('me.static', filename='app/img/web_url_qrcode.png') }}">
+            <p>微信或浏览器扫二维码可打开简历</p>
+            <!--<img src="{{ url_for('me.static', filename='app/img/web_url_qrcode.png') }}">-->
+            <img src="http://7s1srd.com1.z0.glb.clouddn.com/me/web_url_qrcode.png">
         </div>
       </div>
       <div class="modal-footer">

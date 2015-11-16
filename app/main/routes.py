@@ -22,6 +22,9 @@ def index():
 
 @main.route('/app/<key>', methods=['GET'])
 def show(key=None):
+
+    if key == 'dianyingpiao':
+        return render_template("dianyinpiao.html")
     app = get_app_by_name(key)
     data = {"key": app["key"],
             "name": app["name"],
