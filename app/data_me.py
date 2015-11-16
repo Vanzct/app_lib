@@ -157,6 +157,7 @@ employment_experience = [
         "start_date": "2012-07",
         "end_date": "2013-07",
         "photo": '',
+        "photo_on_qiniu": '',
         "detail": u"在东软参与东软内部的产品项目－易测云系统，一款类似于Testin测试云的云测系统，在项目中负责测试框架的开发和"
                   u"部分后台服务的开发。",
         "experiences": [

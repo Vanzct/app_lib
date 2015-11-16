@@ -71,8 +71,27 @@
             <a class="bt_download">下&nbsp;&nbsp;载</a>
         </section>
 	</section>
+    <section id="confirm_page">
+            <div id="confirm_card">
+                <div id="confirm_card_text">
+
+                </div>
+                <a target="_blank" href="http://static.v6v7.com/client/dl/1.2.0/114轻应用.apk" class="hide_confirm" id="confirm_card_bt_download">下载</a><br>
+                <a target="_blank" href="http://static.v6v7.com/client/dl/1.2.0/114轻应用.apk" class="hide_confirm" id="confirm_card_bt_cancel" >取消</a>
+            </div>
+	    </section>
 </div>
 {% endblock %}
-<section class="foot">
-</section>
+
+<script>
+$(function() {
+    console.log(window.screen.availHeight);
+    $(".close_flow").click(function(){
+        $(".push_flow").hide();
+    });
+    $(".hide_confirm").click(function(){
+        $("#confirm_page").hide();
+    });
+});
+</script>
 {% endblock %}
